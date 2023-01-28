@@ -1,0 +1,113 @@
+{
+    "name": "DevContainer for Writers",
+  
+    "build": {
+      "dockerfile": "./Dockerfile",
+      "context": ".",
+      "args": {
+        "VARIANT": "7.0"
+      }
+    },
+  
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [],
+  
+    "features": {
+      // Uncomment the below to install GitHub CLI
+      "ghcr.io/devcontainers/features/github-cli:1": {
+        "version": "latest"
+      },
+  
+      // Uncomment the below to install node.js
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "lts",
+        "nodeGypDependencies": true,
+        "nvmInstallPath": "/usr/local/share/nvm"
+      },
+  
+      // Install common utilities
+      "ghcr.io/devcontainers/features/common-utils:1": {
+        "installZsh": true,
+        "installOhMyZsh": true,
+        "upgradePackages": true,
+        "username": "vscode",
+        "uid": "1000",
+        "gid": "1000"
+      }
+    },
+  
+    "overrideFeatureInstallOrder": [
+      "ghcr.io/devcontainers/features/common-utils"
+    ],
+  
+    // Configure tool-specific properties.
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+          // Recommended extensions - GitHub
+          "cschleiden.vscode-github-actions",
+          "GitHub.vscode-pull-request-github",
+  
+          // Recommended extensions - Collaboration
+          "eamodio.gitlens",
+          "EditorConfig.EditorConfig",
+          "streetsidesoftware.code-spell-checker",
+  
+          // Recommended extensions - Markdown
+          "bierner.github-markdown-preview",
+          "DavidAnson.vscode-markdownlint",
+          "docsmsft.docs-linting",
+          "johnpapa.read-time",
+          "yzhang.markdown-all-in-one",
+  
+          // Required extensions
+          "GitHub.copilot",
+          "ms-vscode.PowerShell"
+        ],
+  
+        "settings": {
+          // Uncomment if you want to use zsh as the default shell
+          "terminal.integrated.defaultProfile.linux": "zsh",
+          "terminal.integrated.profiles.linux": {
+            "zsh": {
+              "path": "/usr/bin/zsh"
+            }
+          },
+  
+          // Uncomment if you want to use CaskaydiaCove Nerd Font as the default terminal font
+          "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  
+          // Uncomment if you want to disable the minimap view
+          "editor.minimap.enabled": false,
+  
+          // Uncomment if you want to disable the welcome page of GitLens
+          "gitlens.showWelcomeOnInstall": false,
+          "gitlens.showWhatsNewAfterUpgrades": false,
+  
+          // Uncomment if you prefer the light colour theme
+          // "workbench.colorTheme": "Default Light+",
+  
+          // Recommended settings for the explorer pane
+          "explorer.sortOrder": "type",
+          "explorer.fileNesting.enabled": true,
+          "explorer.fileNesting.patterns": {
+            "*.bicep": "${capture}.json",
+            "*.razor": "${capture}.razor.css",
+            "*.js": "${capture}.js.map"
+          }
+        }
+      }
+    },
+  
+    // Uncomment if you want to use bash in 'postCreateCommand' after the container is created
+    // "postCreateCommand": "/bin/bash ./.devcontainer/post-create.sh > ~/post-create.log",
+  
+    // Uncomment if you want to use zsh in 'postCreateCommand' after the container is created
+    "postCreateCommand": "/usr/bin/zsh ./.devcontainer/post-create.sh > ~/post-create.log",
+  
+    // Uncomment if you want to connect other than 'root'. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
+  }
+  
