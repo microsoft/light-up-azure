@@ -2,25 +2,29 @@
 
 애저 플레이리스트 시리즈의 세번째 시즌, **Light up Azure**! 아래와 같은 내용으로 준비했습니다.
 
-1. S03E01: 애저 네트워크 기본 설계 ➡️ 정보람 | 클라우드 솔루션 아키텍트 | Microsoft
+1. **S03E01**: 애저 네트워크 기본 설계
+   ➡️ 정보람 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep1" target="_blank"><img src="./assets/thumbnail.anna.jeong.png" style="width: 360px;" alt="썸네일 - 정보람"></a>
     </div>
 
-2. S03E02: 애저 가상머신 확장 집합과 스케일링 시나리오 확인하기 ➡️ 나유강 | 클라우드 솔루션 아키텍트 | Microsoft
+2. **S03E02**: 애저 가상머신 확장 집합과 스케일링 시나리오 확인하기
+   ➡️ 나유강 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep2" target="_blank"><img src="./assets/thumbnail.youkhang.rha.png" style="width: 360px;" alt="썸네일 - 나유강"></a>
     </div>
 
-3. S03E03: 애저 서버리스로 서버 없이 간단한 웹 앱 만들기 ➡️ 어거스트 리 | 클라우드 솔루션 아키텍트 | Microsoft
+3. **S03E03**: 애저 서버리스로 서버 없이 간단한 웹 앱 만들기
+   ➡️ 어거스트 리 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep3" target="_blank"><img src="./assets/thumbnail.august.lee.png" style="width: 360px;" alt="썸네일 - 어거스트 리"></a>
     </div>
 
-4. S03E04: 애저 스트림 애널리틱스 기반 실시간 스트리밍 데이터 분석 ➡️ 공헤원 | 클라우드 솔루션 아키텍트 | Microsoft
+4. **S03E04**: 애저 스트림 애널리틱스 기반 실시간 스트리밍 데이터 분석
+   ➡️ 공헤원 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep4" target="_blank"><img src="./assets/thumbnail.hyewon.kong.png" style="width: 360px;" alt="썸네일 - 공혜원"></a>
