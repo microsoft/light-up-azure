@@ -1,4 +1,4 @@
-# Light up Azure &ndash; Spin-off from Azure Playlists
+# Light up Azure &ndash; Azure Playlists Season 3
 
 애저 플레이리스트 시리즈의 세번째 시즌, **Light up Azure**! 아래와 같은 내용으로 준비했습니다.
 
