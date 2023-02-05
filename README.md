@@ -24,7 +24,7 @@
     </div>
 
 4. **S03E04**: 애저 스트림 애널리틱스 기반 실시간 스트리밍 데이터 분석<br>
-   ➡️ 공헤원 | 클라우드 솔루션 아키텍트 | Microsoft
+   ➡️ 공혜원 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep4" target="_blank"><img src="./assets/thumbnail.hyewon.kong.png" style="width: 360px;" alt="썸네일 - 공혜원"></a>
