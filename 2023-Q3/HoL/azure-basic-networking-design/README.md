@@ -2,7 +2,7 @@
 
 ## 실습 주제
 
-![full architecture](statics/image0.png)
+![full architecture](statics/image00.png)
 
 이번 실습에서는 애저의 가장 핵심 개념인 네트워크의 가상 네트워크 `VNet`를 생성해 보겠습니다. 사용자에게 정적 컨텐츠를 배포해야 하는 Web 티어의 경우에는 공개적으로 접근 가능해야 하고, 비지니스 로직이 있는 App 티어, 데이터베이스 티어등은 공개적인 접근을 막아야 합니다.
 
