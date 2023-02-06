@@ -117,11 +117,15 @@ az vmss show –resource-group luarg –name luavmss
 ```
 ![image](https://user-images.githubusercontent.com/102738814/216810044-2ec78596-d4ab-4336-90fd-0b1453d1f906.png)
 
-이제 VMSS가 참조중인 이미지 버전을 0.1.0으로 바꿔봅니다. 아래 명령어를 통해 바꿀 수 있습니다.
+이제 VMSS가 참조중인 이미지 버전을 0.1.0으로 바꿔봅니다. 아래 명령어를 통해 바꿀 수 있습니다. 
 ```
 az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.imageReference.id=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
 
 ```
+
+여기서 imageReference.id는 아래 화면에서 확인하실 수 있습니다.
+![image](https://user-images.githubusercontent.com/102738814/216854824-08aa9f7c-6b20-45db-86f0-74de5229074f.png)
+
 ![image](https://user-images.githubusercontent.com/102738814/216810046-02359b1e-ffad-4263-ae0c-eabeb6fab300.png)
 
 VMSS에서 참조하는 이미지 버전은 바꾸었으나 기존 인스턴스는 여전히 0.0.0버전입니다. 아래 명령어를 통해서 확인합니다.
