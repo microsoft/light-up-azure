@@ -197,6 +197,7 @@ Autoscale scale down completed를 선택 후 '새로운 경고 규칙' 버튼을
 스케일링 액션이 발생하면 아래와 같이 이메일로 알림을 받게 됩니다.
 ![image](https://user-images.githubusercontent.com/102738814/216810120-436b91f2-93b9-46b5-9da7-787d1250dbd0.png)
 
+마지막으로 실습에 사용했던 리소스를 모두 삭제합니다.
 
 
 
