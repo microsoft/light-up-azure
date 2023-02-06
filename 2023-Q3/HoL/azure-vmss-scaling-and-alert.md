@@ -21,8 +21,10 @@
 
 
 
-커스텀 이미지 제작용 VM을 생성합니다. 
-![image](https://user-images.githubusercontent.com/102738814/216808780-bbdc5c77-72d3-454b-bf74-a040c83bf14e.png)
+커스텀 이미지 제작용 VM을 생성합니다.
+
+![test](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
+
 
 ![image](https://user-images.githubusercontent.com/102738814/216860544-b8ebd953-b720-4b12-a0c9-e4132852657f.png)
 
