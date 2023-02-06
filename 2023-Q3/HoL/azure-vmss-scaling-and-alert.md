@@ -24,7 +24,7 @@
 커스텀 이미지 제작용 VM을 생성합니다. 
 ![image](https://user-images.githubusercontent.com/102738814/216808780-bbdc5c77-72d3-454b-bf74-a040c83bf14e.png)
 
-![image](https://user-images.githubusercontent.com/102738814/216808872-ad420661-980c-439e-8a1f-b25068b61566.png)
+![image](https://user-images.githubusercontent.com/102738814/216860544-b8ebd953-b720-4b12-a0c9-e4132852657f.png)
 
 stress 툴 사용을 위해 Ubuntu 이미지를 사용합니다.
 ![image](https://user-images.githubusercontent.com/102738814/216808891-e8f52771-33c4-4a16-9393-d28c029567f7.png)
@@ -45,7 +45,8 @@ sudo apt-get update
 sudo apt install stress
 ```
 luavm 에서 캡쳐 버튼을 눌러 이미지를 만듭니다.
-![image](https://user-images.githubusercontent.com/102738814/216809145-1fe4bd79-7445-480f-a981-e3167de5af9e.png)
+![image](https://user-images.githubusercontent.com/102738814/216860360-fb9e63e9-2daf-4de6-b996-839e11a3cc7a.png)
+
 
 이 때 이미지를 저장할 Compute Gallery도 함께 생성합니다.
 ![image](https://user-images.githubusercontent.com/102738814/216809156-b571b836-3b29-49ed-ae5f-fbf99e4af627.png)
