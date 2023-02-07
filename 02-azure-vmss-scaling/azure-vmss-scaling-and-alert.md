@@ -2,7 +2,7 @@
 이번 핸즈온랩 세션을 통해 VMSS용 이미지 생성, Compute Gallery 활용, 스케일링 규칙 설정 및 알림 설정에 관해 알아봅니다. 핸즈온랩 데모 시나리오는 아래와 같습니다.
   
 ---
-## 데모 시나리오오오
+## 데모 시나리오
 
 #### 실습 주제
    -  VMSS에서 제공하는 스케일링 조건을 직접 활용해서 VM 이미지를 업데이트 합니다.  
@@ -148,7 +148,7 @@ az vmss show –resource-group luarg –name luavmss
 
 이제 VMSS가 참조중인 이미지 버전을 0.1.0으로 바꿔봅니다. 아래 명령어를 통해 바꿀 수 있습니다. 
 ```
-az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.**imageReference.id**=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
+az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.*imageReference.id*=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
 
 ```
 
@@ -176,7 +176,7 @@ stress --cpu 4
 ```
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide74.PNG)
 
-잠시 후 기존에 없던 2번과 3번 인스턴스가 생성된 것을 확인할 수 있습니다. 또한 0번, 1번 인스턴스와 달리 최신 모델임을 역시 확인할 수 있습니다.
+잠시 후 VMSS 인스턴스 탭에서 기존에 없던 2번과 3번 인스턴스가 생성된 것을 확인할 수 있습니다. 또한 0번, 1번 인스턴스와 달리 최신 모델임을 역시 확인할 수 있습니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide75.PNG)
  
 
@@ -192,7 +192,7 @@ az vmss show --name luavmss --resource-group luarg --instance-id 2
 CPU Percentage가 낮아짐에 따라 Oldest VM인 0번 및 1번 인스턴스가 삭제되는 것을 확인할 수 있습니다. 이로써 0.0.0버전을 참조하는 VM은 모두 삭제되었고, 0.1.0버전을 참조하는 VM만 남게 되었습니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide78.PNG)
 
-여기까지 스케일링을 통해 수동으로 이미지 버전을 업데이트 하는 과정을 학습하셨습니다. 실습 환경에서는 CPU Percentage 메트릭을 기반으로 스케일링 하였으나, 실제 운영 환경에서는 매뉴얼 스케일링(수동 크기 조정)으로 조작하실 수 있습니다.
+여기까지 스케일링을 조건을 통해 이미지 버전을 업데이트 하는 과정을 학습하셨습니다. 실습 환경에서는 CPU Percentage 메트릭을 기반으로 스케일링 하였으나, 실제 운영 환경에서는 매뉴얼 스케일링(수동 크기 조정)으로 조작하실 수 있습니다.
   
   
   ---
