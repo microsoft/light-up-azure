@@ -2,7 +2,7 @@
 이번 핸즈온랩 세션을 통해 VMSS용 이미지 생성, Compute Gallery 활용, 스케일링 규칙 설정 및 알림 설정에 관해 알아봅니다. 핸즈온랩 데모 시나리오는 아래와 같습니다.
   
 ---
-## 데모 시나리오
+## 데모 시나리오오오
 
 #### 실습 주제
    -  VMSS에서 제공하는 스케일링 조건을 직접 활용해서 VM 이미지를 업데이트 합니다.  
@@ -16,7 +16,6 @@
   -   배포한 VM에 stress툴을 설치합니다.
   -   VM을 기반으로 이미지를 두 장 만들고(0.0.0, 0.1.0), Compute Gallery에 저장합니다.
   -   0.0.0 이미지를 기반으로 VMSS를 생성합니다(luavmss).
-  -   비용 절감을 위해 기존 luavm은 삭제합니다.
   -   luavmss에 CPU percentage를 기반으로 한 오토스케일링 규칙을 설정합니다.
   -   Scale-In시 OldestVM부터 삭제되도록 규칙을 설정합니다.
   -   luavmss\_0 인스턴스가 어떤 이미지를 참조하고 있는지 확인합니다(0.0.0).
@@ -48,32 +47,35 @@ stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide38.PNG)
 
+퍼블릭에서 VM에 직접 접속하기 위해 22번 포트를 오픈합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide39.PNG)
 
+모든 설정 값을 확인 후, 이상이 없으면 만들기 버튼을 눌러 가상 머신 리소스를 생성합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide40.PNG)
 
-새로운 탭을 연 후 shell.azure.com에 접속하여 방금 생성한 VM의 public IP로 ssh연결합니다.  
+가상머신 리소스 생성이 완료되었으면 브라우저에서 새로운 탭을 엽니다. 그리고 shell.azure.com에 접속하여 방금 생성한 VM의 public IP로 ssh연결합니다.  
 ```
 ssh yourID@123.234.345.456
 ```
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide41.PNG)
 
 
-id와 password를 입력한 후 stress툴을 설치합니다.
+VM 생성시 입력했던 id와 password를 이용해 VM에 접속합니다.
+그리고 아래 명령어를 통해 stress 툴을 설치합니다.
 ```
 sudo apt-get update
 sudo apt install stress
 ```
-툴 설치가 끝났으면 포털 VM 창으로 돌아와서 캡쳐 버튼을 눌러 이미지를 만듭니다.
+툴 설치가 끝났으면 다시 포털 VM 창으로 돌아옵니다. 상단에 위치한 캡쳐 버튼을 눌러 현재 가상머신을 기반으로 이미지를 만듭니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide43.PNG)
 
 이 때 이미지를 저장할 Compute Gallery도 함께 생성합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide44.PNG)
 
+컴퓨팅 갤러리 내 이미지 정의도 함께 생성합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide45.PNG)
 
-버전은 0.0.0으로 명시합니다.
-
+이미지 버전은 0.0.0으로 명시합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide46.PNG)
 
 리소스 배포가 완료됐을 경우 definition리소스를 클릭하여 0.1.0 버전의 이미지를 하나 더 생성합니다.
@@ -84,7 +86,7 @@ sudo apt install stress
 이미지의 버전 변경(0.0.0 -> 0.1.0)만 확인할 것이기 때문에 기존 luavm의 disk를 기반으로 0.1.0 버전의 이미지를 만듭니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide49.PNG)
 
-0.1.0 버전까지 제작 후 비용 절감을 위해 luavm은 삭제합니다.
+0.1.0 버전까지 제작 후 비용 절감을 위해 luavm을 바로 삭제하실 수 있습니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide50.PNG)
 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide51.PNG)
@@ -95,23 +97,24 @@ sudo apt install stress
 
 ## 이미지 기반으로 VMSS 생성하기
 
-컴퓨팅 갤러리에서 0.0.0 이미지를 기반으로 VMSS를 생성합니다.
+컴퓨팅 갤러리에서 0.0.0 이미지를 기반으로 VMSS를 생성합니다. 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide52.PNG)
 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide53.PNG)
 
+0.0.0 버전을 선택하여 VMSS 만들기 버튼을 클릭합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide54.PNG)
 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide55.PNG)
 
-신규 워크로드에 대해서는 Flexible VMSS를 권장하고 있으나, 실습을 위해 'Uniform 모드(균일성 모드)'를 선택합니다.
+'Uniform 모드(균일성 모드)'를 선택합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide56.PNG)
 
 이미지 버전이 0.0.0이 맞는지 확인합니다. 또한 실습의 편의성을 위해 인증 형식은 암호를 선택합니다. 필요한 값을 모두 입력하였으면 '검토+만들기' 버튼을 눌러 리소스를 배포합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide57.PNG)
 
 리소스가 배포되었으면 생성된 luavmss의 '확장 중 - 구성'탭에 들어가서 오토스케일링을 설정합니다. '규칙 추가'버튼을 눌러 오토스케일링 조건을 입력합니다. 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide58.PNG)
+![test](./azure-vmss-scaling-and-alert-screenshots/Slide588.PNG)
 
 CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케일인 조건을 설정합니다. 조금 더 빠른 스케일 아웃을 위해 기간은 5분으로 설정합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide59.PNG)
@@ -122,7 +125,7 @@ CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케�
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide61.PNG)
 
 마지막으로 최소값, 최대값, 기본값에 각각 1, 10, 2를 입력한 후 저장 버튼을 누릅니다.  
-기본값은 메트릭 수집이 안되는 상황에서 인스턴스 개수를 의미합니다.
+기본값은 메트릭 수집이 안되는 상황에서 유지할 인스턴스 개수를 의미합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide62.PNG)
 
 저장 후 규모 감축 정책 탭에서 OldestVM 옵션을 선택한 후 저장 버튼을 누릅니다.
@@ -145,7 +148,7 @@ az vmss show –resource-group luarg –name luavmss
 
 이제 VMSS가 참조중인 이미지 버전을 0.1.0으로 바꿔봅니다. 아래 명령어를 통해 바꿀 수 있습니다. 
 ```
-az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.imageReference.id=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
+az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.**imageReference.id**=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
 
 ```
 
