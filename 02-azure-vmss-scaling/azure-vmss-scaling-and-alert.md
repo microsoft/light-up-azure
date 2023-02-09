@@ -128,8 +128,11 @@ CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케�
 기본값은 메트릭 수집이 안되는 상황에서 유지할 인스턴스 개수를 의미합니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide62.PNG)
 
-저장 후 규모 감축 정책 탭에서 OldestVM 옵션을 선택한 후 저장 버튼을 누릅니다.
+저장 후 규모 감축 정책 탭에서 OldestVM 옵션을, 알리기 탭에서 알림을 받을 이메일을 선택한 후 저장 버튼을 누릅니다.
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide64.PNG)
+
+
+![test](./azure-vmss-scaling-and-alert-screenshots/Slidenotify.PNG)
 
 인스턴스 탭에서 현재 배포된 VM들이 최신 모델인지 확인합니다. 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide65.PNG)
@@ -197,9 +200,12 @@ CPU Percentage가 낮아짐에 따라 Oldest VM인 0번 및 1번 인스턴스가
   
   ---
 
-## 스케일링 알림 설정
+## 애저 모니터를 통한 스케일링 알림 설정
 
-VMSS에서 스케일링 활동이 일어날 때 담당자에게 문자나 메일로 알람이 가도록 설정할 수 있습니다. VMSS 화면에서 활동 로그 탭을 클릭합니다.
+VMSS에서 스케일 알림 기능을 제공하지만 애저 모니터에서도 알림 설정이 가능합니다. VMSS에서 설정하는 경우 지정된 이메일로만 알림 설정이 가능했다면, 애저 모니터를 통한 알림은 사용자가 지정한 '작업 그룹'에 대해 메일 / SMS / 앱으로 알림이 가능합니다. 더불어 알림 발생 시 action을 발생시킬 수 있습니다. 더불어 작업 그룹은 여러 규칙에 대해 알림을 받도록 설정할 수 있고 애저 모니터에서 알림에 대해 전체적인 관리가 가능합니다.  
+  
+vmss에서 활동 로그 탭을 클릭한 후 스케일인시와 스케일아웃시에 발생한 활동 로그를 확인합니다.
+
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide79.PNG)
 
 Autoscale scale down completed를 선택 후 '새로운 경고 규칙' 버튼을 클릭합니다.
