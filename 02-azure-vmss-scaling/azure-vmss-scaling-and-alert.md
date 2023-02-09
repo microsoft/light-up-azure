@@ -39,7 +39,7 @@
 
 ![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
 
-![가상 머신 생성 버튼 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
+![가상 머신 생성 버튼 클릭 >](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
 
 2. 리소스 생성에 알맞은 구독을 선택하고 리소스 그룹을 새로 생성합니다. 
 stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
