@@ -40,9 +40,8 @@
 
 ![가상 머신 생성 버튼 클릭 >](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
 
-2. 리소스 생성에 알맞은 구독을 선택하고 리소스 그룹을 새로 생성합니다. 
+2. 리소스 생성에 알맞은 구독을 선택하고 리소스 그룹을 새로 생성합니다. stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
 
-stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
 ![리소스 그룹 및 우분투 이미지 선택](./azure-vmss-scaling-and-alert-screenshots/Slide37.PNG)
 
 ![인증 형식은 암호 선택](./azure-vmss-scaling-and-alert-screenshots/Slide38.PNG)
