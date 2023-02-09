@@ -36,11 +36,12 @@
 커스텀 이미지 제작용 VM을 생성합니다.  
 1. 포털 메인 화면 상단에 위치한 검색창에 '가상 머신'을 입력합니다. 포털 설정이 영어로 되어있는 경우 Virtual Machines를 입력합니다.
 
-| ![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG) |
+![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
 
 ![가상 머신 생성 버튼 클릭 >](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
 
 2. 리소스 생성에 알맞은 구독을 선택하고 리소스 그룹을 새로 생성합니다. 
+
 stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
 ![리소스 그룹 및 우분투 이미지 선택](./azure-vmss-scaling-and-alert-screenshots/Slide37.PNG)
 
@@ -66,6 +67,7 @@ sudo apt-get update
 sudo apt install stress
 ```
 4. 툴 설치가 끝났으면 다시 포털 VM 창으로 돌아옵니다. 상단에 위치한 캡쳐 버튼을 눌러 현재 가상머신을 기반으로 이미지를 만듭니다.
+
 ![가상머신 리소스 화면에서 캡처 버튼 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide43.PNG)
 
 이 때 이미지를 저장할 Compute Gallery도 함께 생성합니다.
@@ -78,6 +80,7 @@ sudo apt install stress
 ![이미지 버전 명시](./azure-vmss-scaling-and-alert-screenshots/Slide46.PNG)
 
 5. 리소스 배포가 완료됐을 경우 definition리소스를 클릭하여 0.1.0 버전의 이미지를 하나 더 생성합니다.
+
 ![이미지 정의 리소스 선택](./azure-vmss-scaling-and-alert-screenshots/Slide47.PNG)
 
 ![0.1.0 버전 추가](./azure-vmss-scaling-and-alert-screenshots/Slide48.PNG)
@@ -86,6 +89,7 @@ sudo apt install stress
 ![가상머신 디스크 선택](./azure-vmss-scaling-and-alert-screenshots/Slide49.PNG)
 
 6. 0.1.0 버전까지 제작 후 비용 절감을 위해 luavm을 바로 삭제하실 수 있습니다.
+
 ![가상머신 삭제](./azure-vmss-scaling-and-alert-screenshots/Slide50.PNG)
 
 ![연관된 리소스 함께 삭제](./azure-vmss-scaling-and-alert-screenshots/Slide51.PNG)
@@ -96,7 +100,8 @@ sudo apt install stress
 
 ## 이미지 기반으로 VMSS 생성하기
 
-1. 컴퓨팅 갤러리에서 0.0.0 이미지를 기반으로 VMSS를 생성합니다. 
+1. 컴퓨팅 갤러리에서 0.0.0 이미지를 기반으로 VMSS를 생성합니다.
+
 ![애저 컴퓨팅 갤러리 검색](./azure-vmss-scaling-and-alert-screenshots/Slide52.PNG)
 
 ![이미지 정의 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide53.PNG)
@@ -107,12 +112,14 @@ sudo apt install stress
 ![000 VMSS 버전 만들기 버튼 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide55.PNG)
 
 2. 'Uniform 모드(균일성 모드)'를 선택합니다.
+
 ![균일성 모드](./azure-vmss-scaling-and-alert-screenshots/Slide56.PNG)
 
 이미지 버전이 0.0.0이 맞는지 확인합니다. 또한 실습의 편의성을 위해 인증 형식은 암호를 선택합니다. 필요한 값을 모두 입력하였으면 '검토+만들기' 버튼을 눌러 리소스를 배포합니다.
 ![VMSS 설정값 확인](./azure-vmss-scaling-and-alert-screenshots/Slide57.PNG)
 
-3. 리소스가 배포되었으면 생성된 luavmss의 '확장 중 - 구성'탭에 들어가서 오토스케일링을 설정합니다. '규칙 추가'버튼을 눌러 오토스케일링 조건을 입력합니다. 
+3. 리소스가 배포되었으면 생성된 luavmss의 '확장 중 - 구성'탭에 들어가서 오토스케일링을 설정합니다. '규칙 추가'버튼을 눌러 오토스케일링 조건을 입력합니다.
+
 ![메트릭 기반 오토스케일링 설정](./azure-vmss-scaling-and-alert-screenshots/Slide588.PNG)
 
 CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케일인 조건을 설정합니다. 조금 더 빠른 스케일 아웃을 위해 기간은 5분으로 설정합니다.
@@ -133,7 +140,8 @@ CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케�
 
 ![알림](./azure-vmss-scaling-and-alert-screenshots/Slidenotify.png)
 
-4. 인스턴스 탭에서 현재 배포된 VM들이 최신 모델인지 확인합니다. 
+4. 인스턴스 탭에서 현재 배포된 VM들이 최신 모델인지 확인합니다.
+
 ![최신 모델 여부 확인](./azure-vmss-scaling-and-alert-screenshots/Slide65.PNG)
 
 그리고 0번 인스턴스를 클릭해서 어떤 이미지를 기반으로 생성되었는지 확인할 수 있습니다.
@@ -168,6 +176,7 @@ az vmss show --name luavmss --resource-group luarg --instance-id 0
 ![인스턴스 이미지 버전 000](./azure-vmss-scaling-and-alert-screenshots/Slide71.PNG)
 
 6. VMSS의 인스턴스 탭에서 확인해 보니 참조 이미지를 변경했기 때문에 최신 모델이 아니라고 표시된 것을 확인할 수 있습니다. 0번 인스턴스에 stress를 주기 위해 0번 인스턴스를 클릭한 후 직렬 콘솔을 클릭합니다.
+
 ![최신 모델 아님](./azure-vmss-scaling-and-alert-screenshots/Slide72.PNG)
 
 ![인스턴스 직렬 콘솔 접속](./azure-vmss-scaling-and-alert-screenshots/Slide73.PNG)
@@ -193,6 +202,7 @@ az vmss show --name luavmss --resource-group luarg --instance-id 2
 ![직렬 콘솔 화면에서 스트레스 툴 중지](./azure-vmss-scaling-and-alert-screenshots/Slide77.PNG)
 
 7. CPU Percentage가 낮아짐에 따라 Oldest VM인 0번 및 1번 인스턴스가 삭제되는 것을 확인할 수 있습니다. 이로써 0.0.0버전을 참조하는 VM은 모두 삭제되었고, 0.1.0버전을 참조하는 VM만 남게 되었습니다.
+
 ![oldestVM 스케일인](./azure-vmss-scaling-and-alert-screenshots/Slide78.PNG)
 
 여기까지 스케일링을 조건을 통해 이미지 버전을 업데이트 하는 과정을 학습하셨습니다. 실습 환경에서는 CPU Percentage 메트릭을 기반으로 스케일링 하였으나, 실제 운영 환경에서는 매뉴얼 스케일링(수동 크기 조정)으로 조작하실 수 있습니다.
@@ -209,6 +219,7 @@ VMSS에서 스케일 알림 기능을 제공하지만 애저 모니터에서도 
 ![활동 로그에서 스케일인 스케일아웃 이벤트 확인](./azure-vmss-scaling-and-alert-screenshots/Slide79.PNG)
 
 2. Autoscale scale down completed를 선택 후 '새로운 경고 규칙' 버튼을 클릭합니다.
+
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide80.PNG)
 
 범위를 확인합니다. 현재 실습에서는 luavmss에 대한 알림만 설정하도록 하겠습니다.
@@ -235,9 +246,11 @@ VMSS에서 스케일 알림 기능을 제공하지만 애저 모니터에서도 
 ![경고 규칙 이름 입력](./azure-vmss-scaling-and-alert-screenshots/Slide88.PNG)
 
 3. 작업 그룹에 포함되면 아래와 같은 이메일을 받게 됩니다.
+
 ![작업 그룹에 이메일 입력시 받게되는 알림 이메일](./azure-vmss-scaling-and-alert-screenshots/Slide89.PNG)
 
 4. 스케일링 액션이 발생하면 아래와 같이 이메일로 알림을 받게 됩니다.
+
 ![알림 설정시 받게되는 이메일](./azure-vmss-scaling-and-alert-screenshots/Slide90.PNG)
   
   ---
