@@ -150,7 +150,7 @@ az vmss show –resource-group luarg –name luavmss
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide68.PNG)
 
 이제 VMSS가 참조중인 이미지 버전을 0.1.0으로 바꿔봅니다. 아래 명령어를 통해 바꿀 수 있습니다.  
-클라우드 쉘에서 붙여넣기는 Ctrl + Shift + V 입니다.
+****클라우드 쉘에서 붙여넣기는 Ctrl + Shift + V 입니다.****
 ```
 az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.*imageReference.id*=/subscriptions/{yourAzureSubscriptionID}/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
 
