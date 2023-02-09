@@ -132,7 +132,7 @@ CPU Percentage가 30% 초과일 경우 스케일아웃, 미만일 경우 스케�
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide64.PNG)
 
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slidenotify.PNG)
+![test](./azure-vmss-scaling-and-alert-screenshots/Slidenotify.png)
 
 인스턴스 탭에서 현재 배포된 VM들이 최신 모델인지 확인합니다. 
 ![test](./azure-vmss-scaling-and-alert-screenshots/Slide65.PNG)
