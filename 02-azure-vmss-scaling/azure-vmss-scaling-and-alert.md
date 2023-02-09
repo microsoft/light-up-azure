@@ -34,10 +34,9 @@
 
 ## 이미지 제작용 VM 생성
 커스텀 이미지 제작용 VM을 생성합니다.  
-1. 포털 메인 화면 상단에 위치한 검색창에 '가상 머신'을 입력합니다.  
-포털 설정이 영어로 되어있는 경우 Virtual Machines를 입력합니다.
+1. 포털 메인 화면 상단에 위치한 검색창에 '가상 머신'을 입력합니다. 포털 설정이 영어로 되어있는 경우 Virtual Machines를 입력합니다.
 
-![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
+| ![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG) |
 
 ![가상 머신 생성 버튼 클릭 >](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
 
