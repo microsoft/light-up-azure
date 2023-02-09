@@ -12,22 +12,22 @@
 
 #### VMSS 데모 시나리오  #
 
-  -   커스텀 이미지 제작용 VM을 한 대 배포합니다(luavm).
-  -   배포한 VM에 stress툴을 설치합니다.
-  -   VM을 기반으로 이미지를 두 장 만들고(0.0.0, 0.1.0), Compute Gallery에 저장합니다.
-  -   0.0.0 이미지를 기반으로 VMSS를 생성합니다(luavmss).
-  -   luavmss에 CPU percentage를 기반으로 한 오토스케일링 규칙을 설정합니다.
-  -   Scale-In시 OldestVM부터 삭제되도록 규칙을 설정합니다.
-  -   luavmss\_0 인스턴스가 어떤 이미지를 참조하고 있는지 확인합니다(0.0.0).
-  -   CLI 명령어를 통해 0.1.0 이미지를 참조하도록 설정값을 변경합니다.
+1. 커스텀 이미지 제작용 VM을 한 대 배포합니다(luavm).
+2. 배포한 VM에 stress툴을 설치합니다.
+3. VM을 기반으로 이미지를 두 장 만들고(0.0.0, 0.1.0), Compute Gallery에 저장합니다.
+4. 0.0.0 이미지를 기반으로 VMSS를 생성합니다(luavmss).
+5. luavmss에 CPU percentage를 기반으로 한 오토스케일링 규칙을 설정합니다.
+6. Scale-In시 OldestVM부터 삭제되도록 규칙을 설정합니다.
+7. luavmss\_0 인스턴스가 어떤 이미지를 참조하고 있는지 확인합니다(0.0.0).
+8. CLI 명령어를 통해 0.1.0 이미지를 참조하도록 설정값을 변경합니다.
       -   az vmss update --resource-group luarg --name luavmss --set virtualMachineProfile.storageProfile.imageReference.id=/subscriptions/{subscriptionID}/resourceGroups/luarg/providers/Microsoft.Compute/galleries/luacg/images/luadefinition/versions/0.1.0
-  -   CLI 명령어를 통해 이미지를 0.1.0을 참조하도록 설정하였더라도 개별 인스턴스는 여전히 0.0.0이미지 기반임을 확인합니다.
+9. CLI 명령어를 통해 이미지를 0.1.0을 참조하도록 설정하였더라도 개별 인스턴스는 여전히 0.0.0이미지 기반임을 확인합니다.
       -   az vmss show --name luavmss --resource-group luarg --instance-id 0
-  -   0번 인스턴스의 직렬 콘솔로 접속해서 로그인 후 stress --cpu 4 커맨드를 입력합니다.
-  -   인스턴스가 스케일아웃 된 것과 또한 최신 이미지(0.1.0)를 기반으로 생성됐음을  확인합니다.
-  -   stress를 멈추고 스케일인 되는 것을 확인합니다. 이 때 OldestVM인 인스턴스 숫자가 작은 VM부터 삭제되는 것을 확인합니다.
-  -   Activity log에서 Autoscale scale up completed 와 Autoscale scale down completed 에 대해 알림을 설정합니다.
-  -   마지막으로 실습에서 사용했던 리소스 그룹을 삭제합니다.
+10. 0번 인스턴스의 직렬 콘솔로 접속해서 로그인 후 stress --cpu 4 커맨드를 입력합니다.
+11. 인스턴스가 스케일아웃 된 것과 또한 최신 이미지(0.1.0)를 기반으로 생성됐음을  확인합니다.
+12. stress를 멈추고 스케일인 되는 것을 확인합니다. 이 때 OldestVM인 인스턴스 숫자가 작은 VM부터 삭제되는 것을 확인합니다.
+13. Activity log에서 Autoscale scale up completed 와 Autoscale scale down completed 에 대해 알림을 설정합니다.
+14. 마지막으로 실습에서 사용했던 리소스 그룹을 삭제합니다.
 
 
 ---
@@ -37,27 +37,27 @@
 포털 메인 화면 상단에 위치한 검색창에 '가상 머신'을 입력합니다.  
 포털 설정이 영어로 되어있는 경우 Virtual Machines를 입력합니다.
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
+![가상 머신 리소스 검색](./azure-vmss-scaling-and-alert-screenshots/Slide35.PNG)
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
+![가상 머신 생성 버튼 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide36.PNG)
 
 리소스 생성에 알맞은 구독을 선택하고 리소스 그룹을 새로 생성합니다. 
 stress 툴 사용을 위해 Ubuntu 이미지를 선택합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide37.PNG)
+![리소스 그룹 및 우분투 이미지 선택](./azure-vmss-scaling-and-alert-screenshots/Slide37.PNG)
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide38.PNG)
+![인증 형식은 암호 선택](./azure-vmss-scaling-and-alert-screenshots/Slide38.PNG)
 
 퍼블릭에서 VM에 직접 접속하기 위해 22번 포트를 오픈합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide39.PNG)
+![22번 포트 허용](./azure-vmss-scaling-and-alert-screenshots/Slide39.PNG)
 
 모든 설정 값을 확인 후, 이상이 없으면 만들기 버튼을 눌러 가상 머신 리소스를 생성합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide40.PNG)
+![확인 후 가상머신 리소스 생성](./azure-vmss-scaling-and-alert-screenshots/Slide40.PNG)
 
 가상머신 리소스 생성이 완료되었으면 브라우저에서 새로운 탭을 엽니다. 그리고 shell.azure.com에 접속하여 방금 생성한 VM의 public IP로 ssh연결합니다.  
 ```
 ssh yourID@123.234.345.456
 ```
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide41.PNG)
+![ssh 연결](./azure-vmss-scaling-and-alert-screenshots/Slide41.PNG)
 
 
 VM 생성시 입력했던 id와 password를 이용해 VM에 접속합니다.
@@ -67,29 +67,29 @@ sudo apt-get update
 sudo apt install stress
 ```
 툴 설치가 끝났으면 다시 포털 VM 창으로 돌아옵니다. 상단에 위치한 캡쳐 버튼을 눌러 현재 가상머신을 기반으로 이미지를 만듭니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide43.PNG)
+![가상머신 리소스 화면에서 캡처 버튼 클릭](./azure-vmss-scaling-and-alert-screenshots/Slide43.PNG)
 
 이 때 이미지를 저장할 Compute Gallery도 함께 생성합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide44.PNG)
+![컴퓨팅 갤러리 생성](./azure-vmss-scaling-and-alert-screenshots/Slide44.PNG)
 
 컴퓨팅 갤러리 내 이미지 정의도 함께 생성합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide45.PNG)
+![이미지 정의 생성](./azure-vmss-scaling-and-alert-screenshots/Slide45.PNG)
 
 이미지 버전은 0.0.0으로 명시합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide46.PNG)
+![이미지 버전 명시](./azure-vmss-scaling-and-alert-screenshots/Slide46.PNG)
 
 리소스 배포가 완료됐을 경우 definition리소스를 클릭하여 0.1.0 버전의 이미지를 하나 더 생성합니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide47.PNG)
+![이미지 정의 리소스 선택](./azure-vmss-scaling-and-alert-screenshots/Slide47.PNG)
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide48.PNG)
+![0.1.0 버전 추가](./azure-vmss-scaling-and-alert-screenshots/Slide48.PNG)
 
 이미지의 버전 변경(0.0.0 -> 0.1.0)만 확인할 것이기 때문에 기존 luavm의 disk를 기반으로 0.1.0 버전의 이미지를 만듭니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide49.PNG)
+![가상머신 디스크 선택](./azure-vmss-scaling-and-alert-screenshots/Slide49.PNG)
 
 0.1.0 버전까지 제작 후 비용 절감을 위해 luavm을 바로 삭제하실 수 있습니다.
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide50.PNG)
+![가상머신 삭제](./azure-vmss-scaling-and-alert-screenshots/Slide50.PNG)
 
-![test](./azure-vmss-scaling-and-alert-screenshots/Slide51.PNG)
+![연관된 리소스 함께 삭제](./azure-vmss-scaling-and-alert-screenshots/Slide51.PNG)
   
   
 
