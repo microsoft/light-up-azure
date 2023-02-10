@@ -254,7 +254,7 @@
 
 프라이빗 서브넷에 있는 가상 머신의 경우 인터넷을 통한 블롭 스토리지 연결이 불가능합니다. 하지만 프라이빗 서브넷에 있는 애플리케이션에서도 다른 지역에 있는 리소스나 블롭 스토리지에 연결해야 하는 경우가 있습니다. 이럴 때 사용할 수 있는 것이 바로 `애저 프라이빗 링크`입니다.
 
-애저 프라이빗 링크를 사용하면 가상 네트워크의 [프라이빗 엔드포인트](https://learn.microsoft.com/ko-kr/azure/private-link/private-endpoint-overview)를 통해 애저 PaaS 서비스(예: 애저 스토리지 및 SQL 데이터베이스)와 애저 호스팅 고객 소유/파트너 서비스에 액세스할 수 있습니다.
+애저 프라이빗 링크를 사용하면 가상 네트워크의 [프라이빗 엔드포인트](https://learn.microsoft.com/ko-kr/azure/private-link/private-endpoint-overview?WT.mc_id=dotnet-87053-juyoo)를 통해 애저 PaaS 서비스(예: 애저 스토리지 및 SQL 데이터베이스)와 애저 호스팅 고객 소유/파트너 서비스에 액세스할 수 있습니다.
 
 블롭 스토리지를 구성하고 프라이빗 엔드포인트를 통해 액세스하도록 구성해 보겠습니다.
 
@@ -418,8 +418,8 @@
 
 아래 URL을 통해 다른 네트워크 실습들도 진행해 보실 수 있습니다.
 
-- [가상 네트워크 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-network/quick-create-portal)
-- [가상 네트워크 피어링 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-network/tutorial-connect-virtual-networks-portal?source=recommendations)
-- [보안 그룹을 사용한 네트워크 트래피 필터링](https://learn.microsoft.com/ko-kr/azure/virtual-network/tutorial-filter-network-traffic)
+- [가상 네트워크 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-network/quick-create-portal?WT.mc_id=dotnet-87053-juyoo)
+- [가상 네트워크 피어링 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-network/tutorial-connect-virtual-networks-portal?source=recommendations?WT.mc_id=dotnet-87053-juyoo)
+- [보안 그룹을 사용한 네트워크 트래피 필터링](https://learn.microsoft.com/ko-kr/azure/virtual-network/tutorial-filter-network-traffic?WT.mc_id=dotnet-87053-juyoo)
 
 **긴 시간 동안 수고 많으셨습니다 🙂**
