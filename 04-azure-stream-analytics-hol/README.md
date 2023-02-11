@@ -140,14 +140,12 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 
 ## 생성한 리소스 점검
 
-실행에 필요한 애저 리소스들은 모두 생성이 완료 되었습니다. 템플릿을 이용하여 배포한 서비스들 각각의 역할에 대하여 검토를 합니다.
+실행에 필요한 애저 리소스들은 모두 생성이 완료 되었습니다. 템플릿을 이용하여 배포한 서비스들 각각의 역할에 대하여 검토를 합니다. 본 실습에 사용되는 애저 서비스들은 아래와 같습니다.
 
-- Synapse Analytics 
-- Storage Account
-- Stream Analytics
-- App Service
-- Cosmos DB
-- Event Hub 
+- Synapse Analytics : Stream Analytics의 Output 역할로 정재된 데이터들을 저장.
+- Stream Analytics : Event Hub로 들어온 스트리밍 데이터들을 필요한 정보만 추출하여 Synapse Analytics로 전달.
+- App Service : Toll App역할. Toll gate로 들어오는 나가는 차량 정보를 생성하여 Event Hub로 전달.
+- Event Hub : App Service에서 발생한 데이터를 라이브 스트리밍 하여 Stream Analytics로 전달.
 
 ![image15](./images/image15.png)
 
@@ -259,48 +257,67 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 
 ![image46](./images/image46.png)
 
-21. Synapse Analytics 웹 페이지 왼쪽 메뉴에서 'Data' 탭을 선택한 뒤, 'SQL데이터베이스'-'{생성한 전용 SQL풀}'-'carsummary'-'...'
+21. Synapse Analytics 웹 페이지 왼쪽 메뉴에서 'Data' 탭을 선택한 뒤, 'SQL데이터베이스'-'{생성한 전용 SQL풀}'-'carsummary'-'...' 버튼을 선택 한뒤 [새 SQL스크립트]-[상위 100개 행 선택]을 선택하여 데이터가 정상적으로 추출되는 것을 확인 합니다.
 
 ![image56](./images/image56.png)
 
 
 
+## (Optional)Power BI로 시각화 하기
 
+사전에 Power BI Desktop이 설치 되어 있어야 하며, 작업 영역이 생성 되어 있어야 합니다.
 
-
-
-
-
-## (Optional)Power bi
+1. Synapse 작업 영역 페이지 왼쪽 바에서 'Manage'를 선택한 뒤, 'Linked services' 새로 만들기를 선택 합니다.
 
 ![image47](./images/image47.png)
 
+2. 'Power BI에 연결'을 선택 합니다.
+
 ![image48](./images/image48.png)
+
+3. '이름'에 적절한 네이밍을 입력한 후 '만들기'버튼을 선택 합니다.
 
 ![image49](./images/image49.png)
 
+4. '모두 게시' 버튼을 선택 합니다. 
+
 ![image50](./images/image50.png)
+
+5. 변경 될 서비스 내용을 확인한 후 '게시' 버튼을 선택 합니다.
 
 ![image51](./images/image51.png)
 
+6. 왼쪽 바에서 'Develop'을 선택한 다음 'Power BI 데이터 세트'를 선택하여 새 Power BI 데이터 세트를 생성합니다.
+
 ![image52](./images/image52.png)
 
-
+7. '시작' 버튼을 선택 합니다.
 
 ![image53](./images/image53.png)
 
-
+8. 생성한 전용 SQL풀을 데이터 원본으로 선택 합니다.
 
 ![image54](./images/image54.png)
 
+9. .pbids파일을 다운로드 받습니다.
+
 ![image55](./images/image55.png)
 
-
+10. 다운로드 받은 .pbids 파일을 실행하면 carsummary 테이블을 로드 합니다.
 
 ![image57](./images/image57.png)
 
+11. 연결 설정은 'Direct Query'로 선택 합니다.
+
 ![image58](./images/image58.png)
+
+12. 맨 오른쪽 데이터에서 CarCount, Make, times 를 체크하고 시각화에서 '꺾은 선 형 그래프'를 선택합니다.
+
+    x축 : times
+
+    y축 : CarCount
+
+    범례 : Make
 
 ![image59](./images/image59.png)
 
-![image60](./images/image60.png)
