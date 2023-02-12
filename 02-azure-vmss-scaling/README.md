@@ -207,6 +207,12 @@
     ![imagereferenceid 확인](./images/Slide69.PNG)
 
     ![이미지 레퍼런스 버전 010 확인](./images/Slide70.PNG)
+   
+   혹은 아래 화면처럼 포털에서 참조하는 이미지 버전을 바꿀 수 있습니다.
+
+   ![포털에서 참조 이미지 010 버전으로 변경](./images/010portal.PNG)
+
+   이렇게 CLI 명령어와 포털을 통해 참조 이미지를 바꾸는 방법을 확인했습니다.  
 
    VMSS에서 참조하는 이미지 버전은 바꾸었으나 기존 인스턴스는 여전히 0.0.0버전입니다. 아래 명령어를 통해서 확인합니다.
 
@@ -313,3 +319,5 @@ VMSS에서 스케일 알림 기능을 제공하지만 애저 모니터에서도 
 - [VMSS Flex 소개](https://youtu.be/2BrckSF7ICI)
 - [애저 마스터 클래스 V2 인트로](https://youtu.be/BlSVX1WqTXk)
 - [애저 CLI를 사용하여 가상 머신 확장 집합 만들기 및 관리](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/tutorial-create-and-manage-cli?WT.mc_id=dotnet-87053-juyoo)
+- [활동 로그에서 보이는 flapping 이란?](https://learn.microsoft.com/ko-kr/azure/azure-monitor/autoscale/autoscale-flapping)
+- [자동 OS 업그레이드 설정 요구사항](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade#requirements-for-configuring-automatic-os-image-upgrade)
