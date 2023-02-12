@@ -320,4 +320,4 @@ VMSS에서 스케일 알림 기능을 제공하지만 애저 모니터에서도 
 - [애저 마스터 클래스 V2 인트로](https://youtu.be/BlSVX1WqTXk)
 - [애저 CLI를 사용하여 가상 머신 확장 집합 만들기 및 관리](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/tutorial-create-and-manage-cli?WT.mc_id=dotnet-87053-juyoo)
 - [활동 로그에서 보이는 flapping 이란?](https://learn.microsoft.com/ko-kr/azure/azure-monitor/autoscale/autoscale-flapping)
-- [자동 OS 업그레이드 설정 요구사항](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade#requirements-for-configuring-automatic-os-image-upgrade)
+- [자동 OS 업그레이드 설정 요구사항](https://learn.microsoft.com/ko-kr/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade#automatic-os-image-upgrade-for-custom-images)
