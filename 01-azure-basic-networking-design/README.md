@@ -385,7 +385,6 @@
 
 7. 여기까지 애저의 가상 네트워크에 퍼블릭 서브넷과 프라이빗 서브넷을 구성하고 서비스 엔드포인트를 통해 리소스를 인터넷을 거치지 않고 액세스 할 수 있는 아키텍처를 직접 구성해 보았습니다.
 
-
 아래 URL을 통해 다른 네트워크 실습들도 진행해 보실 수 있습니다.
 
 - [가상 네트워크 만들기](https://learn.microsoft.com/ko-kr/azure/virtual-network/quick-create-portal?WT.mc_id=dotnet-87053-juyoo)
