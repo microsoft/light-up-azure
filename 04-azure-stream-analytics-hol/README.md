@@ -39,11 +39,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;![만들기 버튼 선택](./images/image05.png)
 
 3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고, 스토리지 계정 이름을 고유한 이름으로 작성합니다. 아래 설정에 맞게 선택한 뒤, 다음을 눌러 '데이터 보호' 단계로 이동합니다.
-
    지역 : (Asia Pacific) Korea Central
-
    프리미엄 계정 유형 : 블록 Blob
-
    중복 : LRS
 
 &nbsp;&nbsp;&nbsp;&nbsp;![프리미엄, 블록 유형 선택](./images/image06.png)
@@ -70,13 +67,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;![만들기 버튼 선택](./images/image11.png)
 
 3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고 작업 영역 이름을 적절하게 작성합니다. (예:holws) 아래 설정에 맞게 선택한 뒤 파일 시스템 이름에서 새로 만들기를 선택합니다.
-
    지역 : Korea Central
-
    Data Lake Storage Gen2 선택 : 구독에서
-
    계정이름 : {생성한 스토리지 계정 명}
-
    파일 시스템 이름 : [새로 만들기]
 
 &nbsp;&nbsp;&nbsp;&nbsp;![작업 영역 이름 작성, Data Lake Storage Gen2 선택](./images/image12.png)
@@ -107,7 +100,6 @@ CarCount int,
   )
 WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 ```
-
 &nbsp;&nbsp;&nbsp;&nbsp;![생성한 풀 선택](./images/image28.png)
 
 10. 작성한 SQL 스크립트가 변경될 내용에 포함된 것을 확인하고 '게시'를 선택합니다.
@@ -125,7 +117,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 - Event Hub : App Service에서 발생한 데이터를 라이브 스트리밍 하여 Stream Analytics로 전달.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![리소스 그룹 개요](./images/image15.png)
-
 
 
 ## EventHub  설정
@@ -149,11 +140,8 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 &nbsp;&nbsp;&nbsp;&nbsp;![작업명 입력](./images/image21.png)
 
 7. 이벤트 허브에 연결하기 위한 정보가 적절한지 확인 하고 '연결' 버튼을 선택합니다.
-
    Serialization : Json
-
    인증 모드 : 연결 문자열
-
    이벤트 허브 공유 액세스 키 이름 : RootManageSharedAccessKey
 
 &nbsp;&nbsp;&nbsp;&nbsp;![연결 버튼 선택](./images/image22.png)
@@ -165,14 +153,10 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 &nbsp;&nbsp;&nbsp;&nbsp;![그룹화 방법 선택](./images/image30.png)
 
 10. 그룹화 방법 박스와 이벤트 허브 박스를 연결선을 드래그하여 연결합니다. 오른쪽 그룹화 방법 설정 화면에서 아래 설정에 맞게 선택 후 저장합니다.
-
-    집계 유형 : 개수
-
-    필드 : Make
-
-    집계 그룹화 기준 : Make
-
-    지속 시간 : 3분
+   집계 유형 : 개수
+   필드 : Make
+   집계 그룹화 기준 : Make
+   지속 시간 : 3분
 
 &nbsp;&nbsp;&nbsp;&nbsp;![집계 유형 추가]](./images/image31.png)
 &nbsp;&nbsp;&nbsp;&nbsp;![그룹화 기준 Make선택](./images/image32.png)
@@ -256,13 +240,9 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 &nbsp;&nbsp;&nbsp;&nbsp;![Direct Query선택](./images/image58.png)
 
 12. 맨 오른쪽 데이터에서 CarCount, Make, times 를 체크하고 시각화에서 '꺾은 선 형 그래프'를 선택합니다.
-
-    x축 : times
-
-    y축 : CarCount
-
-    범례 : Make
-
+   x축 : times
+   y축 : CarCount
+   범례 : Make
 &nbsp;&nbsp;&nbsp;&nbsp;![차트 데이터 확인](./images/image59.png)
 
 
