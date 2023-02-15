@@ -38,7 +38,7 @@
 2. 만들기 버튼을 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![만들기 버튼 선택](./images/image05.png)
 
-3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고, 스토리지 계정 이름을 고유한 이름으로 작성합니다. 아래 설정에 맞게 선택한 뒤, 다음을 눌러 '데이터 보호' 단계로 이동합니다.
+3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고, 스토리지 계정 이름을 고유한 이름으로 작성합니다. 아래 설정에 맞게 선택한 뒤, 다음을 눌러 '데이터 보호' 단계로 이동합니다.<br/>
    지역 : (Asia Pacific) Korea Central
    프리미엄 계정 유형 : 블록 Blob
    중복 : LRS
@@ -57,7 +57,6 @@
 
 
 
-
 ## Azure Synapse Analytics생성
 
 1. 애저 포탈 상단 검색 바에서 Azure synapse analytics를 검색하여 서비스 페이지로 이동합니다.
@@ -66,7 +65,7 @@
 2. 만들기 버튼을 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![만들기 버튼 선택](./images/image11.png)
 
-3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고 작업 영역 이름을 적절하게 작성합니다. (예:holws) 아래 설정에 맞게 선택한 뒤 파일 시스템 이름에서 새로 만들기를 선택합니다.
+3. 리소스 그룹에서 생성한 리소스 그룹을 선택하고 작업 영역 이름을 적절하게 작성합니다. (예:holws) 아래 설정에 맞게 선택한 뒤 파일 시스템 이름에서 새로 만들기를 선택합니다.<br/>
    지역 : Korea Central
    Data Lake Storage Gen2 선택 : 구독에서
    계정이름 : {생성한 스토리지 계정 명}
@@ -90,7 +89,7 @@
 8. Synapse 작업 영역 웹 페이지에서 '새로만들기'-'SQL스크립트'를 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![SQL스크립트 선택](./images/image25.png)
 
-9. 쿼리 입력창 중간에 '...'을 선택하여 연결 대상을 생성한 전용 SQL풀로 변경합니다. 그 다음 아래 쿼리를 쿼리창에 입력한 뒤 실행합니다. 쿼리가 정상적으로 실행되면 '모두 게시' 버튼을 선택합니다.
+9. 쿼리 입력창 중간에 '...'을 선택하여 연결 대상을 생성한 전용 SQL풀로 변경합니다. 그 다음 아래 쿼리를 쿼리창에 입력한 뒤 실행합니다. <br/>쿼리가 정상적으로 실행되면 '모두 게시' 버튼을 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;
 ```sql
 CREATE TABLE carsummary   
@@ -110,8 +109,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 
 ## 생성한 리소스 점검
 
-실행에 필요한 애저 리소스들은 모두 생성이 완료 되었습니다. 템플릿을 이용하여 배포한 서비스들 각각의 역할에 대하여 검토를 합니다. 본 실습에 사용되는 애저 서비스들은 아래와 같습니다.
-
+실행에 필요한 애저 리소스들은 모두 생성이 완료 되었습니다. 템플릿을 이용하여 배포한 서비스들 각각의 역할에 대하여 검토를 합니다. <br/>본 실습에 사용되는 애저 서비스들은 아래와 같습니다.<br/>
 - Synapse Analytics : Stream Analytics의 Output 역할로 정재된 데이터들을 저장.
 - Stream Analytics : Event Hub로 들어온 스트리밍 데이터들을 필요한 정보만 추출하여 Synapse Analytics로 전달.
 - App Service : Toll App역할. Toll gate로 들어오는 나가는 차량 정보를 생성하여 Event Hub로 전달.
@@ -140,7 +138,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 6. 새 Stream Analytics 작업 명을 적절하게 입력합니다.(예:hol-asa-job)
 &nbsp;&nbsp;&nbsp;&nbsp;![작업명 입력](./images/image21.png)
 
-7. 이벤트 허브에 연결하기 위한 정보가 적절한지 확인 하고 '연결' 버튼을 선택합니다.
+7. 이벤트 허브에 연결하기 위한 정보가 적절한지 확인 하고 '연결' 버튼을 선택합니다.<br/>
    Serialization : Json
    인증 모드 : 연결 문자열
    이벤트 허브 공유 액세스 키 이름 : RootManageSharedAccessKey
@@ -153,20 +151,19 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 9. '운영'-'그룹화 방법'을 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![그룹화 방법 선택](./images/image30.png)
 
-10. 그룹화 방법 박스와 이벤트 허브 박스를 연결선을 드래그하여 연결합니다. 오른쪽 그룹화 방법 설정 화면에서 아래 설정에 맞게 선택 후 저장합니다.
+10. 그룹화 방법 박스와 이벤트 허브 박스를 연결선을 드래그하여 연결합니다. 오른쪽 그룹화 방법 설정 화면에서 아래 설정에 맞게 선택 후 저장합니다.<br/>
    집계 유형 : 개수
    필드 : Make
    집계 그룹화 기준 : Make
    지속 시간 : 3분
 
-&nbsp;&nbsp;&nbsp;&nbsp;![집계 유형 추가]](./images/image31.png)
+&nbsp;&nbsp;&nbsp;&nbsp;![집계 유형 추가](./images/image31.png)
 &nbsp;&nbsp;&nbsp;&nbsp;![그룹화 기준 Make선택](./images/image32.png)
 
 11. '운영'-'필드 관리'를 선택합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![필드 관리 선택](./images/image33.png)
 
-12. 필드 관리 박스와 그룹화 방법 박스를 연결선을 드래그하여 연결합니다. 오른쪽 필드 추가 버튼을 눌러 Make를 선택합니다.
-
+12. 필드 관리 박스와 그룹화 방법 박스를 연결선을 드래그하여 연결합니다. 오른쪽 필드 추가 버튼을 눌러 Make를 선택합니다.<br/>
     다시 필드 추가 버튼을 눌러 COUNT_Make를 선택한 뒤, 이름을 CarCount로 변경합니다. Window_End_Time 필드를 추가하여 이름을 times로 변경한 뒤 저장합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;![드래그&필드추가Make](./images/image34.png)
@@ -240,7 +237,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 11. 연결 설정은 'Direct Query'로 선택 합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;![Direct Query선택](./images/image58.png)
 
-12. 맨 오른쪽 데이터에서 CarCount, Make, times 를 체크하고 시각화에서 '꺾은 선 형 그래프'를 선택합니다.
+12. 맨 오른쪽 데이터에서 CarCount, Make, times 를 체크하고 시각화에서 '꺾은 선 형 그래프'를 선택합니다.<br/>
    x축 : times
    y축 : CarCount
    범례 : Make
@@ -249,6 +246,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX ) ;
 
 추가로 실습 가능한 링크는 아래와 같습니다.
 
-[IoT스트리밍 데이터 처리](https://learn.microsoft.com/ko-kr/azure/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices)
-[단일 클릭 배포를 사용하여 클릭 동향 분석기 빌드](https://learn.microsoft.com/ko-kr/azure/stream-analytics/quick-start-build-application?view=iotedge-1.4)
+[IoT스트리밍 데이터 처리](https://learn.microsoft.com/ko-kr/azure/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices)<br/>
+[단일 클릭 배포를 사용하여 클릭 동향 분석기 빌드](https://learn.microsoft.com/ko-kr/azure/stream-analytics/quick-start-build-application?view=iotedge-1.4)<br/>
 [Power BI에서 사기성 호출 시각화](https://learn.microsoft.com/ko-kr/azure/stream-analytics/stream-analytics-real-time-fraud-detection)
