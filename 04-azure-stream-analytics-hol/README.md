@@ -91,7 +91,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;![SQL스크립트 선택](./images/image25.png)
 
 9. 쿼리 입력창 중간에 '...'을 선택하여 연결 대상을 생성한 전용 SQL풀로 변경합니다. 그 다음 아래 쿼리를 쿼리창에 입력한 뒤 실행합니다. 쿼리가 정상적으로 실행되면 '모두 게시' 버튼을 선택합니다.
-&nbsp;&nbsp;&nbsp;&nbsp;```sql
+&nbsp;&nbsp;&nbsp;&nbsp;
+```sql
 CREATE TABLE carsummary   
 (  
 Make nvarchar(20),  
