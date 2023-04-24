@@ -5,7 +5,7 @@
 - [GitHub Codespaces](https://docs.github.com/ko/codespaces/overview)
 - [Development Containers Images](https://github.com/devcontainers/images)
 - [Development Container Features](https://github.com/devcontainers/features)
-- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode?WT.mc_id=dotnet-95000-juyoo)
+- [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode?WT.mc_id=dotnet-87053-juyoo)
 
 
 ## GitHub 코파일럿
@@ -15,7 +15,7 @@
 
 ## 애저 Bicep
 
-- [애저 Bicep 개요](https://learn.microsoft.com/ko-kr/azure/azure-resource-manager/bicep/overview?WT.mc_id=dotnet-95000-juyoo&tabs=bicep)
+- [애저 Bicep 개요](https://learn.microsoft.com/ko-kr/azure/azure-resource-manager/bicep/overview?WT.mc_id=dotnet-87053-juyoo&tabs=bicep)
 
 
 ## GitHub 액션 워크플로우
@@ -26,7 +26,7 @@
 
 ## 애저 OpenAI 서비스
 
-- [Azure OpenAI 서비스 설명서](https://learn.microsoft.com/ko-kr/azure/cognitive-services/openai/?WT.mc_id=dotnet-95000-juyoo)
+- [Azure OpenAI 서비스 설명서](https://learn.microsoft.com/ko-kr/azure/cognitive-services/openai/?WT.mc_id=dotnet-87053-juyoo)
 
 
 👈 이전: [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./copilot-gha.md)

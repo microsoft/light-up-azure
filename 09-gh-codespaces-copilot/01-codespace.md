@@ -179,7 +179,7 @@
     }
     ```
 
-   > 더 많은 익스텐션을 설치하고 싶다면 [https://marketplace.visualstudio.com/vscode](https://marketplace.visualstudio.com/vscode??WT.mc_id=dotnet-95000-juyoo)에서 검색한 후 추가하세요.
+   > 더 많은 익스텐션을 설치하고 싶다면 [https://marketplace.visualstudio.com/vscode](https://marketplace.visualstudio.com/vscode??WT.mc_id=dotnet-87053-juyoo)에서 검색한 후 추가하세요.
 
 1. 코드스페이스 UI 구성을 정의합니다. 아래는 미니맵을 비활성화하고 파일을 확장자 기준으로 정리하는 것을 예로 들었습니다.
 

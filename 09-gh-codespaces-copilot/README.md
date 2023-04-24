@@ -8,8 +8,8 @@ GitHub 코드스페이스와 코파일럿을 활용해서 애플리케이션을 
 - [GitHub 계정](https://github.com/signup)
 - [GitHub Copilot 구독](https://docs.github.com/ko/copilot/overview-of-github-copilot/about-github-copilot-for-individuals)
   - 학생의 경우 [GitHub Student Developer Pack 프로그램](https://education.github.com/pack)에 가입하면 무료 사용 가능
-- [애저 무료 구독](https://azure.microsoft.com/ko-kr/free/?WT.mc_id=dotnet-95000-juyoo)
-  - [학생의 경우 신용카드 없이도 무료 구독 신청 가능](https://azure.microsoft.com/ko-kr/free/students/?WT.mc_id=dotnet-95000-juyoo)
+- [애저 무료 구독](https://azure.microsoft.com/ko-kr/free/?WT.mc_id=dotnet-87053-juyoo)
+  - [학생의 경우 신용카드 없이도 무료 구독 신청 가능](https://azure.microsoft.com/ko-kr/free/students/?WT.mc_id=dotnet-87053-juyoo)
 
 
 ## 시작하기
