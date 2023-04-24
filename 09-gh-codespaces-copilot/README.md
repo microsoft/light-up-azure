@@ -14,8 +14,8 @@ GitHub 코드스페이스와 코파일럿을 활용해서 애플리케이션을 
 
 ## 시작하기
 
-- [GitHub 코드스페이스](./codespace.md)
-- [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./copilot-dotnet.md)
-- [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./copilot-bicep.md)
-- [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./copilot-gha.md)
-- [참고 문서](./references.md)
+- [GitHub 코드스페이스](./01-codespace.md)
+- [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md)
+- [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md)
+- [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md)
+- [참고 문서](./05-references.md)

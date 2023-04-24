@@ -150,5 +150,5 @@
     https://appsvc-{{AZURE_ENV_NAME}}.azurewebsites.net/WeatherForecast
     ```
 
-👈 이전: [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./copilot-bicep.md)
-👉 다음: [참고 문서](./references.md)
+👈 이전: [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md)
+👉 다음: [참고 문서](./05-references.md)

@@ -157,5 +157,5 @@
    * "**Please select an Azure Subscription to use**": 자신의 애저 구독 선택
    * "**Please select an Azure location to use**": `Korea Central` 선택
 
-👈 이전: [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./copilot-dotnet.md)
-👉 다음: [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./copilot-gha.md)
+👈 이전: [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md)
+👉 다음: [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md)

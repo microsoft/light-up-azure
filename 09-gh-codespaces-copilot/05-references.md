@@ -29,4 +29,4 @@
 - [Azure OpenAI 서비스 설명서](https://learn.microsoft.com/ko-kr/azure/cognitive-services/openai/?WT.mc_id=dotnet-87053-juyoo)
 
 
-👈 이전: [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./copilot-gha.md)
+👈 이전: [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md)

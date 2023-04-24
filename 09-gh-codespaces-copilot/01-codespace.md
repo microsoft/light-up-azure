@@ -281,4 +281,4 @@ curl -fsSL https://aka.ms/install-azd.sh | bash
     printenv -0 | sort -z | tr '\0' '\n'
     ```
 
-👉 다음: [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./copilot-dotnet.md)
+👉 다음: [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md)
