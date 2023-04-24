@@ -227,5 +227,4 @@
     dotnet build && dotnet test
     ```
 
-👈 이전: [GitHub 코드스페이스](./01-codespace.md)
-👉 다음: [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md)
+👈 이전 | [GitHub 코드스페이스](./01-codespace.md) | [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md) | 다음 👉
