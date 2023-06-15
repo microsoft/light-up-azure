@@ -116,7 +116,7 @@
 
     ```bash
     # Set AZURE_ENV_NAME
-    AZURE_ENV_NAME="swm$RANDOM"
+    AZURE_ENV_NAME="lua$RANDOM"
 
     # Get AZURE_ENV_NAME
     echo $AZURE_ENV_NAME
@@ -125,19 +125,22 @@
 1. 아래 명령어를 입력해서 Azure Dev CLI 구성을 시작합니다.
 
     ```bash
-    azd init
+    azd init -e $AZURE_ENV_NAME
     ```
 
-   * "**Select a project template**": `Empty Template`
-   * "**Please enter a new environment name**": `swm{{숫자}}` 👈 이 값은 앞서 `echo $AZURE_ENV_NAME`으로 확인한 값입니다.
+   아래와 같은 프롬프트가 몇 개 나오는데 계속해서 `y`를 입력합니다.
 
-1. `azure.yaml` 파일 및 `.azure` 디렉토리가 만들어 진 것을 확인합니다.
+   - **The current directory is not empty. Would you like to initialize a project here in '/workspaces/{{REPOSITORY_NAME}}'? (y/N)** 👈 `y` 입력
+   - **Select a project template:  [Use arrows to move, type to filter]** 👈 `Starter - Bicep` 선택
+   - **What would you like to do with these files?  [Use arrows to move, type to filter]** 👈 `Keep my existing files unchanged` 선택
+
+1. `azure.yaml` 파일 및 `.azure` 디렉토리, `.github/workflows` 디렉토리가 만들어 진 것을 확인합니다.
 1. `azure.yaml` 파일을 열어 아래와 같이 내용을 수정합니다.
 
     ```yml
     # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
-    name: swm-codespace-copilot
+    name: lua-codespace-copilot
 
     infra:
       provider: "bicep"
@@ -154,7 +157,7 @@
     azd up
     ```
 
-   * "**Please select an Azure Subscription to use**": 자신의 애저 구독 선택
-   * "**Please select an Azure location to use**": `Korea Central` 선택
+   - "**Please select an Azure Subscription to use**" 👈 자신의 애저 구독 선택
+   - "**Please select an Azure location to use**" 👈 `Korea Central` 선택
 
-👈 이전 | [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md) | [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md) | 다음 👉
+[GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md) 👈 이전 | 다음 👉 [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md)
