@@ -22,12 +22,12 @@
     az account show
     ```
 
-1. 아래 명령어를 통해 애저 로그인 키를 생성합니다. 이 때 이름의 `swm{{숫자}}`는 앞서 생성한 `AZURE_ENV_NAME`입니다.
+1. 아래 명령어를 통해 애저 로그인 키를 생성합니다. 이 때 이름의 `lua{{숫자}}`는 앞서 생성한 `AZURE_ENV_NAME`입니다.
 
     ```bash
     subscriptionId=$(az account show --query "id" -o tsv)
     az ad sp create-for-rbac \
-        --name "spn-swm{{숫자}}" --role contributor \
+        --name "spn-lua{{숫자}}" --role contributor \
         --scopes /subscriptions/$subscriptionId \
         --sdk-auth
     ```
@@ -150,4 +150,4 @@
     https://appsvc-{{AZURE_ENV_NAME}}.azurewebsites.net/WeatherForecast
     ```
 
-👈 이전 | [GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md) | [참고 문서](./05-references.md) | 다음 👉
+[GitHub 코파일럿 &ndash; 애저 Bicep으로 클라우드 인프라 만들기](./03-copilot-bicep.md) 👈 이전 | 다음 👉 [참고 문서](./05-references.md)

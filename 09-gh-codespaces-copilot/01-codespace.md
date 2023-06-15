@@ -13,11 +13,11 @@
 1. `.devcontainer` 디렉토리 아래 아래와 같은 세 파일을 만듭니다.
    - `Dockerfile`
    - `devcontainer.json`
-   - `post-create.sh`
-1. `post-create.sh` 파일에 실행 권한을 줍니다.
+   - `on-create.sh`
+1. `on-create.sh` 파일에 실행 권한을 줍니다.
 
    ```bash
-   chmod +x .devcontainer/post-create.sh
+   chmod +x .devcontainer/on-create.sh
    ```
 
 
@@ -72,8 +72,8 @@
     }
   },
 
-  // post-create.sh 스크립트 실행 명령어
-  "postCreateCommand": "/bin/bash ./.devcontainer/post-create.sh > ~/post-create.log",
+  // on-create.sh 스크립트 실행 명령어
+  "onCreateCommand": "/bin/bash ./.devcontainer/on-create.sh > ~/on-create.log",
 
   // DevContainer 사용자 계정
   "remoteUser": "vscode"
@@ -165,6 +165,7 @@
           // GitHub 코파일럿 관련
           "GitHub.copilot",
           "GitHub.copilot-labs",
+          "GitHub.copilot-chat",
 
           // C# 관련
           "ms-dotnettools.vscode-dotnet-pack",
@@ -197,7 +198,7 @@
     ```
 
 
-## `post-create.sh`
+## `on-create.sh`
 
 `devcontainer.json` 파일로 컨테이너 설정을 끝낸 이후, 마지막으로 추가 기능을 설치하는 스크립트입니다. 아래 내용은 운영체제 업데이트 및 추가 패키지를 설치하는 과정에 대한 예시입니다.
 
@@ -281,4 +282,4 @@ curl -fsSL https://aka.ms/install-azd.sh | bash
     printenv -0 | sort -z | tr '\0' '\n'
     ```
 
-[GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md) | 다음 👉
+다음 👉 [GitHub 코파일럿 &ndash; ASP.NET Core Web API 앱 만들기](./02-copilot-dotnet.md)
