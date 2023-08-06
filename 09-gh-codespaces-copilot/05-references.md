@@ -11,11 +11,15 @@
 ## GitHub 코파일럿
 
 - [GitHub Copilot](https://docs.github.com/ko/copilot/quickstart)
+- [GitHub Copilot CLI](https://githubnext.com/projects/copilot-cli)
+- [GitHub Copilot X](https://github.com/features/preview/copilot-x)
 
 
 ## 애저 Bicep
 
 - [애저 Bicep 개요](https://learn.microsoft.com/ko-kr/azure/azure-resource-manager/bicep/overview?WT.mc_id=dotnet-87053-juyoo&tabs=bicep)
+- [애저 Developer CLI](https://learn.microsoft.com/ko-kr/azure/developer/azure-developer-cli/overview?WT.mc_id=dotnet-87053-juyoo&tabs=bicep)
+- [애저 CLI](https://learn.microsoft.com/ko-kr/cli/azure/what-is-azure-cli?WT.mc_id=dotnet-87053-juyoo&tabs=bicep)
 
 
 ## GitHub 액션 워크플로우
@@ -29,4 +33,4 @@
 - [Azure OpenAI 서비스 설명서](https://learn.microsoft.com/ko-kr/azure/cognitive-services/openai/?WT.mc_id=dotnet-87053-juyoo)
 
 
-👈 이전 | [GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md)
+[GitHub 코파일럿 &ndash; GitHub 액션 워크플로우 만들기](./04-copilot-gha.md) 👈 이전
