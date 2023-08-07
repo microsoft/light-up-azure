@@ -4,7 +4,7 @@
 
 
 9. **S03E09**: CodeSpaces와 GitHub Copilot 코딩 생산성 높이기<br>
-   ➡️ 저스틴 유 | 시니어 클라우드 아드보캇 | Microsoft
+   ➡️ 유저스틴 | 시니어 클라우드 아드보캇 | Microsoft
 
     <div>
       <a href="https://aka.ms/lua/ep9" target="_blank"><img src="./assets/ep09.PNG" style="width: 360px;" alt="썸네일 - 저스틴 유"></a>
