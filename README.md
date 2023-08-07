@@ -7,35 +7,35 @@
    ➡️ 저스틴 유 | 시니어 클라우드 아드보캇 | Microsoft
 
     <div>
-      <a href="https://aka.ms/lua/ep9" target="_blank"><img src="./assets/ep09.png" style="width: 360px;" alt="썸네일 - 저스틴 유"></a>
+      <a href="https://aka.ms/lua/ep9" target="_blank"><img src="./assets/ep09.PNG" style="width: 360px;" alt="썸네일 - 저스틴 유"></a>
     </div>
 
 8. **S03E08**: Power Platform with Azure OpenAI<br>
    ➡️ 어거스트 리 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
-      <a href="https://aka.ms/lua/ep8" target="_blank"><img src="./assets/ep08.png" style="width: 360px;" alt="썸네일 - 어거스트 리"></a>
+      <a href="https://aka.ms/lua/ep8" target="_blank"><img src="./assets/ep08.PNG" style="width: 360px;" alt="썸네일 - 어거스트 리"></a>
     </div>
 
 7. **S03E07**: Azure DevOps를 활용한 MLOps 파이프라인 구성<br>
    ➡️ 정보람 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
-      <a href="https://aka.ms/lua/ep7" target="_blank"><img src="./assets/ep07.png" style="width: 360px;" alt="썸네일 - 정보람"></a>
+      <a href="https://aka.ms/lua/ep7" target="_blank"><img src="./assets/ep07.PNG" style="width: 360px;" alt="썸네일 - 정보람"></a>
     </div>
 
 6. **S03E06**: Azure Cognitive Search and OpenAI Knowledge Mining<br>
    ➡️ 고대운 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
-      <a href="https://aka.ms/lua/ep6" target="_blank"><img src="./assets/ep06.png" style="width: 360px;" alt="썸네일 - 고대운"></a>
+      <a href="https://aka.ms/lua/ep6" target="_blank"><img src="./assets/ep06.PNG" style="width: 360px;" alt="썸네일 - 고대운"></a>
     </div>
 
 5. **S03E05**: Azure OpenAI GPT and Prompt Engineering<br>
    ➡️ 고대운 | 클라우드 솔루션 아키텍트 | Microsoft
 
     <div>
-      <a href="https://aka.ms/lua/ep5" target="_blank"><img src="./assets/ep05.png" style="width: 360px;" alt="썸네일 - 고대운"></a>
+      <a href="https://aka.ms/lua/ep5" target="_blank"><img src="./assets/ep05.PNG" style="width: 360px;" alt="썸네일 - 고대운"></a>
     </div>
 
 4. **S03E04**: 애저 스트림 애널리틱스 기반 실시간 스트리밍 데이터 분석<br>
